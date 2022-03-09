@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: mysvc
+spec:
+
+  type: NodePort
+
+  selector:
+     dc: In 
+  ports:
+   - port: 80
+     targetPort: 80
+     nodePort: 30001
+
+
+
